@@ -47,7 +47,7 @@ python ./tools/get_state_dict.py
 python train.py --config_file=./configs/R_50_C4_1x_train.yaml
 ```
 
-- Currently the model only supports single-scale training, can set the training size to a multiple of 128.
+- The training size is set to a multiple of 128.
 - Multi-GPU phase is not testing yet, be careful to use GPU more than 1.
 
 ## Test and eval
