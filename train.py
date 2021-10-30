@@ -20,7 +20,7 @@ from tensorboardX import SummaryWriter
 sys.path.append(os.getcwd()+'/tools/')
 from augmentations import Augmentation_traininig, Resize
 from loss import FocalLoss, OHEM_loss
-from retinanet import RFN
+from model import RFN
 from datagen import ListDataset
 from encoder import DataEncoder
 from maskrcnn_benchmark.config import cfg

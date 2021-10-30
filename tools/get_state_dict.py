@@ -15,7 +15,7 @@ import torch.nn as nn
 import torch.nn.init as init
 
 from fpn import FPN50
-from retinanet import RFN
+from model import RFN
 from maskrcnn_benchmark.config import cfg
 
 print('Loading pretrained ResNet50 model..')

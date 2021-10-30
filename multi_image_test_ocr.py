@@ -11,7 +11,7 @@ import torch.backends.cudnn as cudnn
 from torch.autograd import Variable
 
 from tools.augmentations import Augmentation_inference
-from tools.retinanet import RFN
+from tools.model import RFN
 from tools.encoder import DataEncoder
 from PIL import Image, ImageDraw
 from tools.utils import check_and_validate_polys, generate_global_input_images_mask,box_iou_xyxy
