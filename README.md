@@ -100,7 +100,7 @@ python test.py --dataset=MPSC --eval
 [comment]: <> (```)
 
 ## Visualizations of MPSC dataset
-![examples1](https://github.com/TongkunGuan/RFN/visualization/MPSC.png)
+![examples1](visualization/MPSC.png)
 
 [comment]: <> (![examples1]&#40;https://github.com/TongkunGuan/RFN/blob/main/visualization/MPSC/Image_001.png&#41;)
 
@@ -115,7 +115,7 @@ python test.py --dataset=MPSC --eval
 [comment]: <> (![examples6]&#40;visualization/MPSC/Image_027.png&#41;)
 
 ## Visualizations of MSRA-TD500, USTB-SV1K, ICDAR2013, ICDAR2017-MLT dataset
-![examples2](https://github.com/TongkunGuan/RFN/visualization/SceneTextDataset.png)
+![examples2](visualization/SceneTextDataset.png)
 
 [comment]: <> (![examples1]&#40;visualization/MSRA-TD500/Image_001.png&#41;)
 
