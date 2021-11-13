@@ -11,7 +11,7 @@
 ## Highlights
 - **Training and evaluation checked:** Testing in MPSC test set with training data in {SynthMPSC, MPSC}. Other scene text datasets are test with pre-training data in SynthText.
 - **Dataset link:** 
-  - **MPSC&SynthMPSC (Ours)** dataset will be released soon here. 
+  - **MPSC&SynthMPSC (Ours)** dataset will be released here soon. 
   - [Synthtext](https://www.robots.ox.ac.uk/~vgg/data/scenetext/)
   - [MSRA-TD500](http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500))
   - [ICDAR2013](https://rrc.cvc.uab.es/?ch=2&com=downloads)
@@ -164,3 +164,12 @@ python test.py --dataset=MPSC --eval
 
 [comment]: <> (![examples6]&#40;visualization/USTB-SV1K/Image_024.png&#41;)
 
+## Citation
+```bash
+@article{guan2021industrial,
+  title={Industrial Scene Text Detection with Refined Feature-attentive Network},
+  author={Guan, Tongkun and Gu, Chaochen and Lu, Changsheng and Tu, Jingzheng and Feng, Qi and Wu, Kaijie and Guan, Xinping},
+  journal={arXiv preprint arXiv:2110.12663},
+  year={2021}
+}
+```
