@@ -1,13 +1,5 @@
 # Text Detection for Industrial Scene with Refined Feature-attentive Network
 
-# Hightlights
-
-- 87.05 F-measure on the MPSC benchmark.
-- 84.9 F-measure on the MSRA-TD500 benchmark.
-- 73.2 F-measure on the USTB-SV1K benchmark. 
-- 91.6 F-measure on the ICDAR2013 benchmark.
-- 73.0 F-measure on the ICDAR2017-MLT benchmark.
-
 [comment]: <> (and testing speed can reach 6.99 fps with 768px &#40;tested in single GPU of Tesla V100&#41;)
 ## Environments
 - Ubuntu 16.04
