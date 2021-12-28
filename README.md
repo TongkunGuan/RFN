@@ -60,7 +60,6 @@ python test.py --dataset=MPSC --eval
 - Here we provide some pretained weights for testing in baidu drive:
 ```bash
   Pretrain SynthMPSC : https://pan.baidu.com/s/1BI2T4ncowKu908dcd9tT7g (0ke0)
-  Pretrain SynthText : https://pan.baidu.com/s/16q7jB2vLvW49fcs9nfXxRA (waki)
 ```
 
 ## More Results 
