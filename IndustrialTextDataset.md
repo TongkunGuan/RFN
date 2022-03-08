@@ -1,8 +1,8 @@
 # MPSC
 
-###The Metal Part Surface Character (MPSC) dataset contains 2555 training images and 639 testing images. 
+The Metal Part Surface Character (MPSC) dataset contains 2555 training images and 639 testing images. 
 
-###The detailed data analysis is shown as follows:
+The detailed data analysis is shown as follows:
 ![MPSC](visualization/MPSC_Analysis.png)
 
 ####The MPSC dataset provides high-quality ground-truth boxes and text transcriptions. Most of them contain special combination rules that are different from the legal spelling of words, such as ”AlSi9Cu3”, ”D151C-050506”, and ”7M121”.
