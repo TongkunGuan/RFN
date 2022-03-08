@@ -5,23 +5,23 @@ The Metal Part Surface Character (MPSC) dataset contains 2555 training images an
 The detailed data analysis is shown as follows:
 ![MPSC](visualization/MPSC_Analysis.png)
 
-####The MPSC dataset provides high-quality ground-truth boxes and text transcriptions. Most of them contain special combination rules that are different from the legal spelling of words, such as ”AlSi9Cu3”, ”D151C-050506”, and ”7M121”.
+The MPSC dataset provides high-quality ground-truth boxes and text transcriptions. Most of them contain special combination rules that are different from the legal spelling of words, such as ”AlSi9Cu3”, ”D151C-050506”, and ”7M121”.
 
-###Also, our datasets bring many new challenges affected by the following factors: 
+Also, our datasets bring many new challenges affected by the following factors: 
 ![MPSC](visualization/Challenge.png)
 
-####(a) Metal properties, industrial text detectors should consider the challenges of low visual contrast (LC) and uneven illumination (UI) on parts due to metal materials.
-####(b) Industrial circumstances, the parts appear corroded surfaces (CS) and dirty surfaces (DS) due to the influence of weather and humidity in the production workshop.
-####(c) Scene noise, unconstrained motion shooting produces blur texts (BT) and introduces an industrial complex background (CB).
-####(d) Artificial design, product information is mainly presented on metal parts in multiple forms, including multi-direction (MO), multi-scale (MS), high-density (HD), and polymorphic characters (PC).
+(a) Metal properties, industrial text detectors should consider the challenges of low visual contrast (LC) and uneven illumination (UI) on parts due to metal materials.
+(b) Industrial circumstances, the parts appear corroded surfaces (CS) and dirty surfaces (DS) due to the influence of weather and humidity in the production workshop.
+(c) Scene noise, unconstrained motion shooting produces blur texts (BT) and introduces an industrial complex background (CB).
+(d) Artificial design, product information is mainly presented on metal parts in multiple forms, including multi-direction (MO), multi-scale (MS), high-density (HD), and polymorphic characters (PC).
 
-###The dataset and annotations are now avaiable from [Disk](https://pan.baidu.com/s/17ti8kPivnlN9JSwCeOcPsw).
+The dataset and annotations are now avaiable from [Disk](https://pan.baidu.com/s/17ti8kPivnlN9JSwCeOcPsw).
 
 # SynthMPSC
 
-###The SynthMPSC dataset is an extension of the MPSC dataset, containing 98962 images and 1933234 text instances. 
-  
-###This dataset and annotations can be obtained from [Disk](https://pan.baidu.com/s/104XqEYYV8S-68MH9PJeWWw).
+The SynthMPSC dataset is an extension of the MPSC dataset, containing 98962 images and 1933234 text instances. 
+
+This dataset and annotations can be obtained from [Disk](https://pan.baidu.com/s/104XqEYYV8S-68MH9PJeWWw).
   
 # Cite
 ```bash
