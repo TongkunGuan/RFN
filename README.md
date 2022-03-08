@@ -1,4 +1,6 @@
-# Text Detection for Industrial Scene with Refined Feature-attentive Network
+# Text Detection for Industrial Scene with Refined Feature-attentive Network 
+This is the code of "Text Detection for Industrial Scene with Refined Feature-attentive Network". 
+For more details, please refer to our [TCSVT paper (Early Access)](https://ieeexplore.ieee.org/document/9726175).
 
 [comment]: <> (and testing speed can reach 6.99 fps with 768px &#40;tested in single GPU of Tesla V100&#41;)
 ## Environments
@@ -10,8 +12,8 @@
 
 ## Highlights
 - **Training and evaluation checked:** Testing in MPSC test set with training data in {SynthMPSC, MPSC}. Other scene text datasets are test with pre-training data in SynthText.
-- **Dataset link:** 
-  - **MPSC&SynthMPSC (Ours)** dataset will be released here soon. 
+- **Dataset link:**
+  - MPSC&SynthMPSC: Please refer to [Industrial Text Dataset.md](Industrial Text Dataset.md) for dataset download.
   - [Synthtext](https://www.robots.ox.ac.uk/~vgg/data/scenetext/)
   - [MSRA-TD500](http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500))
   - [ICDAR2013](https://rrc.cvc.uab.es/?ch=2&com=downloads)
@@ -67,29 +69,31 @@ python test.py --dataset=MPSC --eval
 - RFN | MPSC | 89.30 | 83.33 | 86.21 | [model](https://pan.baidu.com/s/1j22FSpGBKQgPkVncvQ41ng) | 6u6y
 - RFN* | MPSC | 89.82 | 84.45 | 87.05 | [model](https://pan.baidu.com/s/1lHUEmXKra9CTubBDR_a7xA) | xrni
 
-## Training logs and results for comparative experimental
-```bash
-  train_log_url : https://pan.baidu.com/s/1364azjk0hdy8Aeekk_tRQg 
-  Extraction code : bd9z
-```
-- Model | Dataset | Precision | Recall | F-Measure
-- MASKRCNN | MPSC | 85.28 | 79.25 | 82.15
-- DB | MPSC | 87.77 | 78.73 | 83.00 
-- PAN | MPSC | 87.07 | 81.60 | 84.24 
-- PSENET | MPSC | 85.42 | 78.40 | 81.76 
-- ContourNet | MPSC | 87.79 | 81.02 | 84.27 
-- RRPN++ | MPSC | 86.73 | 83.90 | 85.30 
-- FCENET | MPSC | 87.13 | 81.63 | 84.29 
+[comment]: <> (## Training logs and results for comparative experimental)
 
-[comment]: <> (## Final )
+[comment]: <> (```bash)
 
-[comment]: <> (- Enjoy it with all the codes.)
+[comment]: <> (  train_log_url : https://pan.baidu.com/s/1364azjk0hdy8Aeekk_tRQg )
 
-[comment]: <> (- Citing us if you find it work in your projects.)
+[comment]: <> (  Extraction code : bd9z)
 
 [comment]: <> (```)
 
-[comment]: <> (```)
+[comment]: <> (- Model | Dataset | Precision | Recall | F-Measure)
+
+[comment]: <> (- MASKRCNN | MPSC | 85.28 | 79.25 | 82.15)
+
+[comment]: <> (- DB | MPSC | 87.77 | 78.73 | 83.00 )
+
+[comment]: <> (- PAN | MPSC | 87.07 | 81.60 | 84.24 )
+
+[comment]: <> (- PSENET | MPSC | 85.42 | 78.40 | 81.76 )
+
+[comment]: <> (- ContourNet | MPSC | 87.79 | 81.02 | 84.27 )
+
+[comment]: <> (- RRPN++ | MPSC | 86.73 | 83.90 | 85.30 )
+
+[comment]: <> (- FCENET | MPSC | 87.13 | 81.63 | 84.29 )
 
 ## Visualizations of MPSC dataset
 ![examples1](visualization/MPSC.png)
@@ -165,10 +169,26 @@ python test.py --dataset=MPSC --eval
 
 ## Citation
 ```bash
+If you find our method useful for your reserach, please cite
+
+@ARTICLE{9726175,
+  author={Guan, Tongkun and Gu, Chaochen and Lu, Changsheng and Tu, Jingzheng and Feng, Qi and Wu, Kaijie and Guan, Xinping},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
+  title={Industrial Scene Text Detection with Refined Feature-attentive Network}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TCSVT.2022.3156390}}
+
 @article{guan2021industrial,
   title={Industrial Scene Text Detection with Refined Feature-attentive Network},
   author={Guan, Tongkun and Gu, Chaochen and Lu, Changsheng and Tu, Jingzheng and Feng, Qi and Wu, Kaijie and Guan, Xinping},
   journal={arXiv preprint arXiv:2110.12663},
   year={2021}
 }
+```
+## License
+```bash
+- This code are only free for academic research purposes, licensed under the 2-clause BSD License - see the LICENSE file for details.
 ```
