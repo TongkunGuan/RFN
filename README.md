@@ -13,7 +13,7 @@ For more details, please refer to our [TCSVT paper (Early Access)](https://ieeex
 ## Highlights
 - **Training and evaluation checked:** Testing in MPSC test set with training data in {SynthMPSC, MPSC}. Other scene text datasets are test with pre-training data in SynthText.
 - **Dataset link:**
-  - MPSC&SynthMPSC: Please refer to [Industrial Text Dataset.md](Industrial Text Dataset.md) for dataset download.
+  - MPSC&SynthMPSC: Please refer to [IndustrialTextDataset.md](IndustrialTextDataset.md) for dataset download.
   - [Synthtext](https://www.robots.ox.ac.uk/~vgg/data/scenetext/)
   - [MSRA-TD500](http://www.iapr-tc11.org/mediawiki/index.php/MSRA_Text_Detection_500_Database_(MSRA-TD500))
   - [ICDAR2013](https://rrc.cvc.uab.es/?ch=2&com=downloads)
