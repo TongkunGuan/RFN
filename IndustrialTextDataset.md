@@ -25,7 +25,7 @@ This dataset and annotations can be obtained from [Disk](https://pan.baidu.com/s
   
 # Cite
 ```bash
-  If you used this dataset, please cite the following paper:
+  If you used this dataset, please cite the following paper (Early Access):
   @ARTICLE{9726175,
     author={Guan, Tongkun and Gu, Chaochen and Lu, Changsheng and Tu, Jingzheng and Feng, Qi and Wu, Kaijie and Guan, Xinping},
     journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
@@ -33,13 +33,13 @@ This dataset and annotations can be obtained from [Disk](https://pan.baidu.com/s
     year={2022},
     volume={},
     number={},
-    pages={1-1},
+    pages={},
     doi={10.1109/TCSVT.2022.3156390}}
 ```
 
 [comment]: <> (  ###The extraction code of dataset links is "sgtk".)
 ## License
 ```bash
-- This dataset (MPSC and SynthMPSC) are only free for academic research purposes, licensed under the CC BY-NC 4.0 License.
+- This dataset (MPSC and SynthMPSC) are only free for academic research purposes and licensed under the CC BY-NC 4.0 License.
 ```
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可。

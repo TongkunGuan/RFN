@@ -190,5 +190,5 @@ If you find our method useful for your reserach, please cite
 ```
 ## License
 ```bash
-- This code are only free for academic research purposes, licensed under the 2-clause BSD License - see the LICENSE file for details.
+- This code are only free for academic research purposes and licensed under the 2-clause BSD License - see the LICENSE file for details.
 ```
