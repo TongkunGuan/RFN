@@ -1,6 +1,6 @@
 # Text Detection for Industrial Scene with Refined Feature-attentive Network 
 This is the code of "Text Detection for Industrial Scene with Refined Feature-attentive Network". 
-For more details, please refer to our [TCSVT paper (Early Access)](https://ieeexplore.ieee.org/document/9726175).
+For more details, please refer to our [TCSVT paper (Early Access)](https://ieeexplore.ieee.org/document/9726175) or [Poster](RFN_Poster.pdf).
 
 [comment]: <> (and testing speed can reach 6.99 fps with 768px &#40;tested in single GPU of Tesla V100&#41;)
 ## Environments
