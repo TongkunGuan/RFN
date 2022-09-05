@@ -82,11 +82,11 @@ If you find our method useful for your reserach, please cite
 @ARTICLE{9726175,
   author={Guan, Tongkun and Gu, Chaochen and Lu, Changsheng and Tu, Jingzheng and Feng, Qi and Wu, Kaijie and Guan, Xinping},
   journal={IEEE Transactions on Circuits and Systems for Video Technology}, 
-  title={Industrial Scene Text Detection with Refined Feature-attentive Network}, 
+  title={Industrial Scene Text Detection With Refined Feature-Attentive Network}, 
   year={2022},
-  volume={},
-  number={},
-  pages={1-1},
+  volume={32},
+  number={9},
+  pages={6073-6085},
   doi={10.1109/TCSVT.2022.3156390}}
 
 @article{guan2021industrial,
