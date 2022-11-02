@@ -51,9 +51,7 @@ python train.py --config_file=./configs/R_50_C4_1x_train.yaml
 - option parameters: save_img, show_mask
 ```bash
 ### test each image
-python test.py --dataset=MPSC --config_file=./configs/R_50_C4_1x_train.yaml --test --save_img
-```
-```bash
+python test.py --dataset=MPSC --config_file=./configs/R_50_C4_1x_train.yaml --test
 ### eval result
 python test.py --dataset=MPSC --eval
 ```
