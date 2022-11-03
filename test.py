@@ -76,7 +76,7 @@ if args.test:
     elif args.dataset in ["ICDAR2017MLT"]:
         img_dir = path + "/ICDAR2017MLT/ICDAR2017MLT_validation/"
     elif args.dataset in ["MPSC"]:
-        img_dir = path + "/MPSC/MSC_Dataset/test/"
+        img_dir = path + "/MPSC/image/test/"
     val_list = [im for im in os.listdir(img_dir) if "jpg" in im]
     print('dataset_length:{:}'.format(len(val_list)))
 
@@ -148,7 +148,7 @@ if args.test:
                 img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
                 img = np.array(img, dtype=np.uint8)
                 # draw gt points
-                gt_anno = open(path+"/%s/test/gt_%s.txt" % (args.dataset,_img[5:-4]), "r")
+                gt_anno = open(path+"/%s/annotation/test/gt_%s.txt" % (args.dataset,_img[5:-4]), "r")
                 gt_anno = gt_anno.readlines()
                 """
                 you need modify some codes for different dataset!
