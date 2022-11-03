@@ -61,7 +61,7 @@ python test.py --dataset=MPSC --eval
 - Here we provide some pretained weights for testing:
 ```bash
   Pretrain SynthMPSC : https://pan.baidu.com/s/1BI2T4ncowKu908dcd9tT7g (0ke0)
-  Pretrain SynthText : 
+  Pretrain SynthText : https://pan.baidu.com/s/1IwALX0LrQewsk9Rf5cK1Dw (6dzr)
 ```
 
 ## More Results 
