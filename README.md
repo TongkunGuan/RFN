@@ -29,6 +29,7 @@ Check [INSTALL.md](INSTALL.md) for installation instructions.
 - Modify some settings in `$RFN_ROOT/tools/encoder.py`, including anchor_areas, aspect_ratios.
 ```bash
 # refer to /data_process/Compute aspect_ratios and area_ratios.py
+For example the setting of MPSC as follows:
 self.anchor_areas = [16*16., 32*32., 64*64., 128*128., 256*256, 512*512.]
 self.aspect_ratios = [1., 2., 3., 5., 1./2., 1./3., 1./5.,7.]
 ```
