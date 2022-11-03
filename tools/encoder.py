@@ -4,17 +4,18 @@ import torch
 import numpy as np
 import cv2
 
-from utils import meshgrid, box_iou, change_box_order, softmax,select_top_predictions,convert_angle_into_polygons,convert_angle_into_polygons_and_refine_Diamond_box
-from nms_poly import non_max_suppression_poly
+from tools.utils import meshgrid, box_iou, change_box_order, softmax,select_top_predictions,convert_angle_into_polygons,convert_angle_into_polygons_and_refine_Diamond_box
+from tools.nms_poly import non_max_suppression_poly
 class DataEncoder:
     def __init__(self, cls_thresh=0.3, nms_thresh=0.1,input_size=768):
-        self.anchor_areas = [32*32., 48*48., 64*64., 96*96., 128*128., 176*176.]  #USTB-SV1K
+        # self.anchor_areas = [32*32., 48*48., 64*64., 96*96., 128*128., 176*176.]  #USTB-SV1K
+        # self.aspect_ratios = [1., 2., 3., 4., 5., 1. / 3., 1. / 5., 7.]
         # self.anchor_areas = [24 * 24., 64 * 64., 144 * 144., 224 * 224., 304 * 304., 384 * 384.] #MLT-1536
         # self.anchor_areas = [20 * 20., 52 * 52., 120 * 120., 186 * 186., 254 * 254., 320 * 320.] #MLT-1280
         # self.anchor_areas = [16 * 16., 32 * 32., 64 * 64., 128 * 128., 256 * 256, 512 * 512.] #ICDAR2013-768
         # self.anchor_areas = [12 * 12., 32 * 32., 72 * 72., 112 * 112., 152 * 152., 192 * 192.] #MLT-768
-        # self.anchor_areas = [16 * 16., 32 * 32., 64 * 64., 128 * 128., 256 * 256, 512 * 512.] #MPSC-768,MSRA-TD500-768
-        self.aspect_ratios = [1., 2., 3., 4., 5., 1./3., 1./5.,7.]
+        self.anchor_areas = [16 * 16., 32 * 32., 64 * 64., 128 * 128., 256 * 256, 512 * 512.] #MPSC-768,MSRA-TD500-768
+        self.aspect_ratios = [1., 2., 3., 5., 1. / 2., 1. / 3., 1. / 5., 7.]
         self.input_size=torch.Tensor([input_size, input_size])
         self.anchor_wh = self._get_anchor_wh()
         self.anchor_rect_boxes = self._get_anchor_boxes(self.input_size)
@@ -169,23 +170,25 @@ class DataEncoder:
             boxes = np.clip(boxes, 0, input_size)
             score=scores_j
         """Re_score"""
-        # gts = gts_preds[1][0, 1, :, :].sigmoid().cpu().detach().numpy()
-        # quad_boxes_rescore = boxes / 4
-        # polys = np.array(quad_boxes_rescore).reshape((-1, 4, 2)).astype(np.int32)
-        # if polys.shape[0] == 1:
-        #     text_mask = np.zeros((input_size//4, input_size//4), dtype=np.uint8)
-        #     text_mask = cv2.fillPoly(text_mask, [polys[0]], 1)
-        #     gts_score = (gts * text_mask).sum() / text_mask.sum()
-        #     rescore = 2 * np.exp(gts_score + score) / (np.exp(gts_score) + np.exp(score))
-        # else:
-        #     rescore = []
-        #     for i, poly in enumerate(polys):
-        #     # generate text mask for per text region poly
-        #         text_mask = np.zeros((input_size//4, input_size//4), dtype=np.uint8)
-        #         text_mask = cv2.fillPoly(text_mask, [poly], 1)
-        #         gts_score = (gts * text_mask).sum() / text_mask.sum()
-        #         rescore.append(np.exp(score[i]) * (1 + lamda * np.exp(gts_score) / np.exp(1 - gts_score)))
-        # score = np.array(rescore)
-        # print(boxes.shape)
+        gts = gts_preds[1, :, :].sigmoid().cpu().detach().numpy()
+        quad_boxes_rescore = boxes / 4
+        polys = np.array(quad_boxes_rescore).reshape((-1, 4, 2)).astype(np.int32)
+        if polys.shape[0] == 1:
+            text_mask = np.zeros((input_size//4, input_size//4), dtype=np.uint8)
+            text_mask = cv2.fillPoly(text_mask, [polys[0]], 1)
+            gts_score = (gts * text_mask).sum() / text_mask.sum()
+            rescore = 2 * np.exp(gts_score + score) / (np.exp(gts_score) + np.exp(score))
+        else:
+            rescore = []
+            for i, poly in enumerate(polys):
+            # generate text mask for per text region poly
+                text_mask = np.zeros((input_size//4, input_size//4), dtype=np.uint8)
+                text_mask = cv2.fillPoly(text_mask, [poly], 1)
+                gts_score = (gts * text_mask).sum() / text_mask.sum()
+                rescore.append(np.exp(score[i]) * (1 + lamda * np.exp(gts_score) / np.exp(1 - gts_score)))
+        score = np.array(rescore)
+        print(boxes.shape)
         keep = non_max_suppression_poly(boxes, score, nms_thresh)
         return boxes[keep], score[keep]
+
+
