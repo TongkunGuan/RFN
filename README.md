@@ -88,13 +88,6 @@ If you find our method useful for your reserach, please cite
   number={9},
   pages={6073-6085},
   doi={10.1109/TCSVT.2022.3156390}}
-
-@article{guan2021industrial,
-  title={Industrial Scene Text Detection with Refined Feature-attentive Network},
-  author={Guan, Tongkun and Gu, Chaochen and Lu, Changsheng and Tu, Jingzheng and Feng, Qi and Wu, Kaijie and Guan, Xinping},
-  journal={arXiv preprint arXiv:2110.12663},
-  year={2021}
-}
 ```
 ## License
 ```bash
